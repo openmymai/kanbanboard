@@ -70,7 +70,7 @@ const Kanban = () => {
                 >
               
                 <div className="card-header">{labelsMap[channel]}</div>
-                <ul className="list-group list-group-flush">
+                <div>
                   {tasks
                     .filter(item => item.status === channel)
                     .map(item => (
@@ -78,8 +78,7 @@ const Kanban = () => {
                         <div style={classes.item}>{item.title}</div>
                       </KanbanItem>
                     ))}
-                </ul>
-
+                </div>
             </KanbanColumn>
             </div>
               </div>
